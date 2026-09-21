@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Engenharia Contra Incêndio | Regularização AVCB e CLCB</title>
   <meta name="description" content="Especialistas em AVCB, CLCB, vistorias e projetos de combate a incêndio. Regularize seu imóvel com rapidez e evite multas e interdições.">
-  
+  <meta property="og:description" content="Evite multas e interdições. Laudos técnicos, vistorias e projetos de engenharia contra incêndio em SP.">
+  <meta property="og:title" content="Engenharia Contra Incêndio | Regularização AVCB e CLCB">
+  <meta property="og:type" content="website">
+
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +40,10 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -415,6 +422,175 @@
       color: var(--medium-gray);
     }
 
+    /* FAQ Section */
+    .faq-section {
+      background-color: var(--light-gray);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .faq-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 35px;
+    }
+
+    .faq-filter-btn {
+      padding: 8px 18px;
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--medium-gray);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .faq-filter-btn:hover {
+      border-color: var(--primary-red);
+      color: var(--primary-red);
+    }
+
+    .faq-filter-btn.active {
+      background-color: var(--primary-red);
+      color: var(--white);
+      border-color: var(--primary-red);
+      box-shadow: 0 4px 12px rgba(211, 47, 47, 0.25);
+    }
+
+    .faq-accordion {
+      max-width: 850px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-item:hover {
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-item.active {
+      border-color: var(--primary-red);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      outline: none;
+      padding: 20px 24px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark-gray);
+      transition: var(--transition);
+    }
+
+    .faq-question:hover {
+      color: var(--primary-red);
+    }
+
+    .faq-item.active .faq-question {
+      color: var(--primary-red);
+    }
+
+    .faq-icon-wrapper {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: rgba(211, 47, 47, 0.08);
+      color: var(--primary-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon-wrapper {
+      transform: rotate(180deg);
+      background-color: var(--primary-red);
+      color: var(--white);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
+      padding: 0 24px;
+      color: var(--medium-gray);
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 400px;
+      opacity: 1;
+      padding: 0 24px 22px 24px;
+    }
+
+    .faq-answer strong {
+      color: var(--dark-gray);
+    }
+
+    .faq-category-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--primary-red);
+      background-color: rgba(211, 47, 47, 0.08);
+      padding: 3px 10px;
+      border-radius: 50px;
+      margin-bottom: 8px;
+    }
+
+    .faq-cta-box {
+      max-width: 850px;
+      margin: 40px auto 0;
+      background: var(--white);
+      border: 1px dashed var(--primary-red);
+      border-radius: 12px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .faq-cta-box h4 {
+      font-size: 1.15rem;
+      color: var(--dark-gray);
+      margin-bottom: 4px;
+    }
+
+    .faq-cta-box p {
+      font-size: 0.9rem;
+      color: var(--medium-gray);
+    }
+
     /* Lead Form Section */
     .form-section {
       background: linear-gradient(135deg, var(--dark-gray) 0%, #111115 100%);
@@ -563,6 +739,11 @@
         grid-template-columns: 1fr;
         gap: 30px;
       }
+      .faq-cta-box {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+      }
     }
 
     @media (max-width: 768px) {
@@ -575,6 +756,16 @@
       .hero-actions .btn {
         width: 100%;
       }
+      .faq-question {
+        padding: 16px 18px;
+        font-size: 0.98rem;
+      }
+      .faq-answer {
+        padding: 0 18px;
+      }
+      .faq-item.active .faq-answer {
+        padding: 0 18px 18px 18px;
+      }
     }
   </style>
 </head>
@@ -585,12 +776,13 @@
     <div class="container">
       <a href="#" class="logo">
         <i class="fa-solid fa-fire-extinguisher"></i>
-        <span>PREVENT</span>FIRE
+        <span>PROTECH</span>FIRE
       </a>
       <nav class="nav-links">
         <a href="#servicos">Serviços</a>
         <a href="#por-que-regularizar">Riscos e Multas</a>
         <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">Dúvidas Frequentes</a>
       </nav>
       <a href="#orcamento" class="btn btn-red" style="padding: 10px 20px; font-size: 0.9rem;">
         Solicitar Vistoria
@@ -765,6 +957,153 @@
       </div>
     </section>
 
+    <!-- Nova Seção: Perguntas Frequentes (FAQ) -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Dúvidas Frequentes (FAQ)</h2>
+          <p>Principais respostas sobre AVCB, CLCB, exigências normativas e processos do Corpo de Bombeiros.</p>
+        </div>
+
+        <!-- Filtros por Categoria -->
+        <div class="faq-filters" role="tablist">
+          <button type="button" class="faq-filter-btn active" data-category="todas">Todas as Dúvidas</button>
+          <button type="button" class="faq-filter-btn" data-category="geral">Geral & Diferenças</button>
+          <button type="button" class="faq-filter-btn" data-category="prazos">Prazos & Processos</button>
+          <button type="button" class="faq-filter-btn" data-category="riscos">Legislação & Riscos</button>
+          <button type="button" class="faq-filter-btn" data-category="vistorias">Vistorias & Orçamento</button>
+        </div>
+
+        <!-- Lista de Itens do Accordion -->
+        <div class="faq-accordion" id="faqAccordion">
+
+          <!-- Pergunta 1 -->
+          <div class="faq-item" data-category="geral">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Qual é a diferença exata entre AVCB e CLCB?</span>
+              <div class="faq-icon-wrapper">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <span class="faq-category-tag">Geral & Diferenças</span>
+              <p>O <strong>CLCB (Certificado de Licença do Corpo de Bombeiros)</strong> é um processo simplificado para edificações de baixo potencial de risco — geralmente com área construída de até 750 m² e até 3 pavimentos, sem armazenamento de combustíveis ou produtos perigosos. Já o <strong>AVCB (Auto de Vistoria do Corpo de Bombeiros)</strong> é emitido para edificações de maior porte (acima de 750 m²), com mais de 3 andares ou com alta concentração de público, exigindo Projeto Técnico detalhado (PPCI) e vistoria presencial dos Bombeiros.</p>
+            </div>
+          </div>
+
+          <!-- Pergunta 2 -->
+          <div class="faq-item" data-category="geral">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Quem é obrigado por lei a ter AVCB ou CLCB?</span>
+              <div class="faq-icon-wrapper">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <span class="faq-category-tag">Geral & Diferenças</span>
+              <p>Todas as <strong>edificações comerciais, indústrias, prestadores de serviços, locais de reunião pública e condomínios residenciais multifamiliares (prédios)</strong> são legalmente obrigados a manter a licença vigente. A única exceção prevista pela legislação estadual são as residências unifamiliares (casas térreas ou sobrados de uso exclusivamente familiar privado).</p>
+            </div>
+          </div>
+
+          <!-- Pergunta 3 -->
+          <div class="faq-item" data-category="prazos">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Qual é o prazo de validade do AVCB e quando devo renovar?</span>
+              <div class="faq-icon-wrapper">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <span class="faq-category-tag">Prazos & Processos</span>
+              <p>A validade varia geralmente de <strong>1 a 5 anos</strong>, dependendo da tipologia de uso e da ocupação do imóvel. Locais de reunião pública com grande fluxo (casas de eventos, teatros, bares) têm validade de 1 ano. Prédios residenciais e comércios de baixo risco costumam ter validade de 2 a 5 anos. Recomendamos iniciar o processo de renovação com <strong>60 a 90 dias de antecedência</strong> do vencimento para evitar lacunas na cobertura de seguro e multas.</p>
+            </div>
+          </div>
+
+          <!-- Pergunta 4 -->
+          <div class="faq-item" data-category="prazos">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Quanto tempo demora para aprovar e emitir a licença?</span>
+              <div class="faq-icon-wrapper">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <span class="faq-category-tag">Prazos & Processos</span>
+              <p>Para o <strong>CLCB</strong>, após o levantamento técnico e pagamento das taxas do Estado, a emissão costuma ocorrer entre <strong>3 a 7 dias úteis</strong>. Para o <strong>AVCB</strong>, o prazo médio costuma variar de <strong>15 a 45 dias</strong>, pois depende do agendamento da vistoria presencial pelos oficiais do Corpo de Bombeiros e da execução das eventuais adequações apontadas.</p>
+            </div>
+          </div>
+
+          <!-- Pergunta 5 -->
+          <div class="faq-item" data-category="riscos">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>O que acontece se o imóvel não tiver o AVCB ou estiver vencido?</span>
+              <div class="faq-icon-wrapper">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <span class="faq-category-tag">Legislação & Riscos</span>
+              <p>O imóvel fica sujeito a <strong>notificações, multas progressivas de valores expressivos e até interdição sumária</strong> da atividade pela fiscalização. Além disso, a Prefeitura pode cassar o Alvará de Funcionamento e os bancos podem recusar financiamentos ou renovações de crédito imobiliário.</p>
+            </div>
+          </div>
+
+          <!-- Pergunta 6 -->
+          <div class="faq-item" data-category="riscos">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>A seguradora paga a indenização em caso de incêndio sem AVCB?</span>
+              <div class="faq-icon-wrapper">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <span class="faq-category-tag">Legislação & Riscos</span>
+              <p><strong>Não.</strong> Praticamente todas as apólices de seguro patrimonial contêm cláusula de exclusão de cobertura em caso de descumprimento de normas regulamentadoras e falta de licença válida do Corpo de Bombeiros. Em caso de sinistro, a indenização é indeferida e o prejuízo recai totalmente sobre o proprietário ou condomínio.</p>
+            </div>
+          </div>
+
+          <!-- Pergunta 7 -->
+          <div class="faq-item" data-category="vistorias">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>O que é a Vistoria Prévia da ProtechFire e por que ela evita prejuízos?</span>
+              <div class="faq-icon-wrapper">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <span class="faq-category-tag">Vistorias & Orçamento</span>
+              <p>É uma auditoria técnica completa feita pelos nossos engenheiros antes da inspeção dos Bombeiros. Verificamos extintores, bombas de incêndio, sinalizações de emergência, rotas de fuga, alarmes e instalações elétricas. Com isso, corrigimos todas as irregularidades com antecedência, <strong>eliminando o risco de reprovação, custos com novas taxas de vistoria e perda de prazos operacionais</strong>.</p>
+            </div>
+          </div>
+
+          <!-- Pergunta 8 -->
+          <div class="faq-item" data-category="vistorias">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Quais são os itens e equipamentos obrigatórios para aprovação?</span>
+              <div class="faq-icon-wrapper">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <span class="faq-category-tag">Vistorias & Orçamento</span>
+              <p>As exigências dependem do tamanho e uso do imóvel, mas geralmente englobam: <strong>extintores de incêndio com carga válida e selo INMETRO</strong>, <strong>sinalização de emergência fotoluminescente</strong> (rotas de fuga e saídas), <strong>blocos autônomos de iluminação de emergência</strong>, laudos elétricos e de gás com ART assinada por engenheiro. Imóveis maiores exigem hidrantes, alarmes de incêndio, portas corta-fogo e treinamento de brigada de emergência.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Box CTA dentro do FAQ -->
+        <div class="faq-cta-box">
+          <div>
+            <h4>Ainda ficou com alguma dúvida sobre o seu imóvel?</h4>
+            <p>Nossos engenheiros especializados tiram suas dúvidas e analisam a situação do seu imóvel sem custo inicial.</p>
+          </div>
+          <a href="https://wa.me/5511933133491?text=Olá!%20Tenho%20uma%20dúvida%20específica%20sobre%20o%20AVCB/CLCB%20do%20meu%20imóvel." target="_blank" class="btn btn-green" style="padding: 12px 22px; font-size: 0.95rem;">
+            <i class="fa-brands fa-whatsapp"></i> Tirar Dúvida no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Formulário de Contato / Orçamento -->
     <section id="orcamento" class="form-section">
       <div class="container">
@@ -817,7 +1156,7 @@
         <div class="footer-col">
           <div class="logo" style="color: var(--white); margin-bottom: 16px;">
             <i class="fa-solid fa-fire-extinguisher"></i>
-            <span>PREVENT</span>FIRE
+            <span>PROTECH</span>FIRE
           </div>
           <p>Empresa de Engenharia especializada em adequação normativa e obtenção de licenças perante o Corpo de Bombeiros da Polícia Militar.</p>
         </div>
@@ -827,6 +1166,7 @@
             <li><a href="#servicos">Serviços Técnicos</a></li>
             <li><a href="#por-que-regularizar">Importância da Licença</a></li>
             <li><a href="#depoimentos">Depoimentos de Clientes</a></li>
+            <li><a href="#faq">Perguntas Frequentes (FAQ)</a></li>
             <li><a href="#orcamento">Solicitar Proposta</a></li>
           </ul>
         </div>
@@ -834,85 +1174,142 @@
           <h4>Atendimento</h4>
           <ul>
             <li><i class="fa-solid fa-phone" style="color: var(--primary-red); margin-right: 8px;"></i> (11) 93313-3491</li>
-            <li><i class="fa-solid fa-envelope" style="color: var(--primary-red); margin-right: 8px;"></i> contato@preventfire.com.br</li>
+            <li><i class="fa-solid fa-envelope" style="color: var(--primary-red); margin-right: 8px;"></i> contato@protechfire.com.br</li>
             <li><i class="fa-solid fa-location-dot" style="color: var(--primary-red); margin-right: 8px;"></i> São Paulo - SP</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 PreventFire Soluções de Engenharia Ltda. Todos os direitos reservados. Registro CREA ativo.</p>
+        <p>&copy; 2026 ProtechFire Soluções de Engenharia Ltda. Todos os direitos reservados. Registro CREA ativo.</p>
         <p style="margin-top: 6px; font-size: 0.75rem; color: #718096;">Nota: As exigências e termos técnicos atendem às Instruções Técnicas vigentes do Corpo de Bombeiros.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Script JS -->
+  <!-- Script JS Interativo -->
   <script>
-    // Máscara de Telefone Automática: (XX) XXXXX-XXXX ou (XX) XXXX-XXXX
+    // 1. Accordion do FAQ Interativo
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const questionBtn = item.querySelector('.faq-question');
+      
+      questionBtn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+
+        // Fecha os outros itens para manter visual limpo
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            const otherBtn = otherItem.querySelector('.faq-question');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Alterna o item atual
+        if (isOpen) {
+          item.classList.remove('active');
+          questionBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('active');
+          questionBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Abre o primeiro item por padrão para engajamento imediato
+    if (faqItems.length > 0) {
+      faqItems[0].classList.add('active');
+      const firstBtn = faqItems[0].querySelector('.faq-question');
+      if (firstBtn) firstBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    // 2. Filtro por Categoria do FAQ
+    const filterButtons = document.querySelectorAll('.faq-filter-btn');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Atualiza botão ativo
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const category = btn.getAttribute('data-category');
+
+        faqItems.forEach(item => {
+          const itemCategory = item.getAttribute('data-category');
+          if (category === 'todas' || itemCategory === category) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 3. Máscara de Telefone Automática: (XX) XXXXX-XXXX ou (XX) XXXX-XXXX
     const inputTelefone = document.getElementById('telefone');
 
-    inputTelefone.addEventListener('input', function (e) {
-      let value = e.target.value.replace(/\D/g, ''); // remove tudo o que não for dígito
-      if (value.length > 11) value = value.slice(0, 11);
+    if (inputTelefone) {
+      inputTelefone.addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 11) value = value.slice(0, 11);
 
-      if (value.length > 10) {
-        // Formato Celular: (XX) XXXXX-XXXX
-        value = value.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
-      } else if (value.length > 5) {
-        // Formato Fixo parcial / Celular parcial
-        value = value.replace(/^(\d{2})(\d{4})(\d{0,4})$/, '($1) $2-$3');
-      } else if (value.length > 2) {
-        value = value.replace(/^(\d{2})(\d{0,5})$/, '($1) $2');
-      } else if (value.length > 0) {
-        value = value.replace(/^(\d*)/, '($1');
-      }
+        if (value.length > 10) {
+          value = value.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+        } else if (value.length > 5) {
+          value = value.replace(/^(\d{2})(\d{4})(\d{0,4})$/, '($1) $2-$3');
+        } else if (value.length > 2) {
+          value = value.replace(/^(\d{2})(\d{0,5})$/, '($1) $2');
+        } else if (value.length > 0) {
+          value = value.replace(/^(\d*)/, '($1');
+        }
 
-      e.target.value = value;
-    });
+        e.target.value = value;
+      });
+    }
 
-    // Envio do Formulário direcionando para WhatsApp
+    // 4. Envio do Formulário direcionando para WhatsApp
     const form = document.getElementById('leadForm');
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-      const nome = document.getElementById('nome').value.trim();
-      const telefone = document.getElementById('telefone').value.trim();
-      const tipoImovel = document.getElementById('tipoImovel').value;
-      const mensagem = document.getElementById('mensagem').value.trim();
+        const nome = document.getElementById('nome').value.trim();
+        const telefone = document.getElementById('telefone').value.trim();
+        const tipoImovel = document.getElementById('tipoImovel').value;
+        const mensagem = document.getElementById('mensagem').value.trim();
 
-      // Número da central de atendimento (DDI + DDD + Telefone)
-      const whatsappNumero = "5511933133491";
+        const whatsappNumero = "5511933133491";
 
-      // Montagem do texto personalizado
-      let textoMsg = `*Novo Lead do Site - Vistoria & AVCB/CLCB*\n\n`;
-      textoMsg += `*Nome:* ${nome}\n`;
-      textoMsg += `*Telefone:* ${telefone}\n`;
-      textoMsg += `*Tipo de Imóvel:* ${tipoImovel}\n`;
-      if (mensagem) {
-        textoMsg += `*Mensagem:* ${mensagem}\n`;
-      }
+        let textoMsg = `*Novo Lead do Site - Vistoria & AVCB/CLCB*\n\n`;
+        textoMsg += `*Nome:* ${nome}\n`;
+        textoMsg += `*Telefone:* ${telefone}\n`;
+        textoMsg += `*Tipo de Imóvel:* ${tipoImovel}\n`;
+        if (mensagem) {
+          textoMsg += `*Mensagem:* ${mensagem}\n`;
+        }
 
-      // Feedback visual e redirecionamento
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
 
-      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Encaminhando...';
-      submitBtn.disabled = true;
-
-      setTimeout(() => {
-        const url = `https://wa.me/${whatsappNumero}?text=${encodeURIComponent(textoMsg)}`;
-        window.open(url, '_blank');
-
-        submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Mensagem Gerada!';
-        form.reset();
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Encaminhando...';
+        submitBtn.disabled = true;
 
         setTimeout(() => {
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-        }, 3000);
-      }, 700);
-    });
+          const url = `https://wa.me/${whatsappNumero}?text=${encodeURIComponent(textoMsg)}`;
+          window.open(url, '_blank');
+
+          submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Mensagem Gerada!';
+          form.reset();
+
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          }, 3000);
+        }, 700);
+      });
+    }
   </script>
 </body>
 </html>
