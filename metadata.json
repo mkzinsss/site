@@ -1,0 +1,6 @@
+{
+  "name": "ProtechFire - Engenharia Contra Incêndio",
+  "description": "Regularização de AVCB e CLCB, vistorias técnicas, PPCI e projetos de prevenção e combate a incêndio com seção completa de FAQ e atendimento via WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
