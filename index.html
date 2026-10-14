@@ -124,21 +124,32 @@
     }
 
     .logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--dark-gray);
+      text-decoration: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
-    .logo span {
-      color: var(--primary-red);
+    .logo:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
     }
 
-    .logo i {
-      color: var(--primary-red);
-      font-size: 1.6rem;
+    .logo-img {
+      height: 46px;
+      width: auto;
+      max-width: 320px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .footer-logo-img {
+      height: 46px;
+      width: auto;
+      max-width: 320px;
+      object-fit: contain;
+      display: block;
     }
 
     .nav-links {
@@ -747,6 +758,10 @@
     }
 
     @media (max-width: 768px) {
+      .logo-img, .footer-logo-img {
+        height: 38px;
+        max-width: 240px;
+      }
       .nav-links {
         display: none;
       }
@@ -774,13 +789,12 @@
   <!-- Header -->
   <header class="header">
     <div class="container">
-      <a href="#" class="logo">
-        <i class="fa-solid fa-fire-extinguisher"></i>
-        <span>PROTECH</span>FIRE
+      <a href="#" class="logo" aria-label="PROTECH FIRE - Engenharia Contra Incêndio">
+        <img src="/assets/Logo ProtechFire em Metal e Chamas.png" alt="PROTECH FIRE - Engenharia Contra Incêndio" class="logo-img" />
       </a>
       <nav class="nav-links">
         <a href="#servicos">Serviços</a>
-        <a href="#por-que-regularizar">Riscos e Multas</a>
+        <a href="#por-que-regularizar">Segurança e Conformidade</a>
         <a href="#depoimentos">Depoimentos</a>
         <a href="#faq">Dúvidas Frequentes</a>
       </nav>
@@ -799,7 +813,7 @@
             Evite Multas e Interdições: Regularize seu <span>AVCB ou CLCB</span> sem Burocracia.
           </h1>
           <p class="hero-subtitle">
-            Engenharia especializada em emissão, renovação, vistoria técnica e adequação contra incêndio para condomínios, indústrias e estabelecimentos comerciais.
+            Engenharia especializada em emissão, renovação, vistoria técnica e adequação contra incêndio para edificações residenciais, comerciais, industriais e institucionais.
           </p>
           <div class="hero-actions">
             <a href="https://wa.me/5511933133491?text=Olá!%20Preciso%20de%20ajuda%20para%20regularizar%20o%20AVCB/CLCB%20do%20meu%20imóvel." target="_blank" class="btn btn-green">
@@ -827,9 +841,10 @@
           <h3>Seu imóvel está seguro hoje?</h3>
           <p>Não arrisque a perda de licença ou problemas com a seguradora. Nossos engenheiros realizam o diagnóstico completo das conformidades.</p>
           <ul style="margin-bottom: 20px; font-size: 0.95rem; color: var(--medium-gray);">
-            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color: var(--primary-red); margin-right: 8px;"></i> Diagnóstico técnico pontual</li>
-            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color: var(--primary-red); margin-right: 8px;"></i> Adequação rigorosa às Instruções Técnicas</li>
-            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color: var(--primary-red); margin-right: 8px;"></i> Acompanhamento do início à emissão da licença</li>
+            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color: var(--primary-red); margin-right: 8px;"></i> Relatório técnico preciso</li>
+            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color: var(--primary-red); margin-right: 8px;"></i> Soluções inteligentes visando o menor custo de adequação</li>
+            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color: var(--primary-red); margin-right: 8px;"></i> Acompanhamento integral até a emissão da licença</li>
+            <li style="margin-bottom: 10px;"><i class="fa-solid fa-check" style="color: var(--primary-red); margin-right: 8px;"></i> 1 ano de consultoria técnica gratuita mesmo após a emissão</li>
           </ul>
           <a href="#orcamento" class="btn btn-red" style="width: 100%;">
             Solicitar Orçamento
@@ -910,13 +925,13 @@
               <div class="stars">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p class="testimonial-text">"Estávamos com o prazo de fiscalização no limite e correndo risco de autuação. A equipe fez a vistoria prévia e nosso AVCB saiu em tempo recorde."</p>
+              <p class="testimonial-text">"Resolveram o AVCB do condomínio sem enrolação. Acompanharam a vistoria dos bombeiros e resolveram as pendências direto com eles. Excelente atendimento."</p>
             </div>
             <div class="client-info">
               <div class="client-avatar">CL</div>
               <div class="client-details">
                 <h4>Carlos Lima</h4>
-                <span>Síndico Profissional - Condomínio Horizon</span>
+                <span>Síndico Profissional</span>
               </div>
             </div>
           </div>
@@ -925,13 +940,13 @@
               <div class="stars">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p class="testimonial-text">"Regularizar o galpão de logística de 4.000m² parecia um pesadelo burocrático. A PreventFire estruturou todo o PPCI e executou as adequações perfeitamente."</p>
+              <p class="testimonial-text">"Atendimento justo e técnico. Identificaram só as adequações necessárias no galpão, sem empurrar obra desnecessária. Aprovado de primeira."</p>
             </div>
             <div class="client-info">
               <div class="client-avatar">MR</div>
               <div class="client-details">
                 <h4>Marcos Roberto</h4>
-                <span>Gerente Operacional - TransLog Brasil</span>
+                <span>Gerente Operacional</span>
               </div>
             </div>
           </div>
@@ -940,13 +955,13 @@
               <div class="stars">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p class="testimonial-text">"Atendimento impecável! O CLCB da minha clínica foi emitido sem nenhuma pendência. Transparência nos orçamentos e agilidade incomparável."</p>
+              <p class="testimonial-text">"Atendimento nota 10 pelo WhatsApp! Agilizaram a renovação do alvará da clínica super rápido e cuidaram de toda a parte burocrática."</p>
             </div>
             <div class="client-info">
               <div class="client-avatar">FA</div>
               <div class="client-details">
                 <h4>Dra. Fernanda Alves</h4>
-                <span>Proprietária - Clínica Médica Integrada</span>
+                <span>Clínica Médica Integrada</span>
               </div>
             </div>
           </div>
@@ -1026,7 +1041,7 @@
             </button>
             <div class="faq-answer">
               <span class="faq-category-tag">Prazos & Processos</span>
-              <p>Para o <strong>CLCB</strong>, após o levantamento técnico e pagamento das taxas do Estado, a emissão costuma ocorrer entre <strong>3 a 7 dias úteis</strong>. Para o <strong>AVCB</strong>, o prazo médio costuma variar de <strong>15 a 45 dias</strong>, pois depende do agendamento da vistoria presencial pelos oficiais do Corpo de Bombeiros e da execução das eventuais adequações apontadas.</p>
+              <p>A emissão é conduzida com máxima agilidade e eficiência técnica. O tempo para a liberação final está diretamente atrelado à prontidão na execução das eventuais adequações identificadas em nossa vistoria. Quanto mais célere for a implementação das melhorias recomendadas, mais rápida será a aprovação definitiva junto ao Corpo de Bombeiros — sempre com o acompanhamento contínuo dos nossos engenheiros para acelerar cada etapa do processo.</p>
             </div>
           </div>
 
@@ -1151,10 +1166,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="logo" style="color: var(--white); margin-bottom: 16px;">
-            <i class="fa-solid fa-fire-extinguisher"></i>
-            <span>PROTECH</span>FIRE
-          </div>
+          <a href="#" class="logo" aria-label="PROTECH FIRE - Engenharia Contra Incêndio" style="margin-bottom: 16px;">
+            <img src="/assets/Logo ProtechFire em Metal e Chamas.png" alt="PROTECH FIRE - Engenharia Contra Incêndio" class="footer-logo-img" />
+          </a>
           <p>Empresa de Engenharia especializada em adequação normativa e obtenção de licenças perante o Corpo de Bombeiros da Polícia Militar.</p>
         </div>
         <div class="footer-col">
